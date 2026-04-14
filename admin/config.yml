@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: emma-g-123/cabot
+  name: git-gateway
   branch: main
-  site_domain: eclectic-buttercream-4391c7.netlify.app
 
 media_folder: "uploads"
 public_folder: "/uploads"
