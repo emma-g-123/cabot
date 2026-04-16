@@ -19,7 +19,7 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,16 +71,16 @@ body {
 }
 
 .nav-logo-small {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .nav-logo-small img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -111,13 +111,13 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3;
     text-align: center;
-    max-width: 250px;
+    max-width: 350px;
     width: 90%;
 }
 
 .hero-logo img {
-    max-width: 250px;
-    max-height: 150px;
+    max-width: 350px;
+    max-height: 220px;
     width: 100%;
     height: auto;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
