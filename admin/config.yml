@@ -6,6 +6,18 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "hero"
+        label: "Hero Carousel Images"
+        file: "_content/hero-settings.md"
+        fields:
+          - {label: "Hero Image 1", name: "hero_image_1", widget: "image"}
+          - {label: "Hero Image 2", name: "hero_image_2", widget: "image"}
+          - {label: "Hero Image 3", name: "hero_image_3", widget: "image"}
+          - {label: "Hero Image 4", name: "hero_image_4", widget: "image"}
+
   - name: "pages"
     label: "Pages"
     folder: "_content/pages"

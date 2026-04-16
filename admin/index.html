@@ -1,14 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Admin</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabot's Trees & Hedges | Professional Tree Surgery in Surrey</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </body>
+</head>
+<body>
+    <!-- Hero Section with Carousel -->
+    <header class="hero-section">
+        <!-- Carousel Images Container -->
+        <div class="carousel-container">
+            <img src="uploads/hero-1.jpg" alt="Tree services" class="carousel-image carousel-image-1" />
+            <img src="uploads/hero-2.jpg" alt="Tree services" class="carousel-image carousel-image-2" style="display: none;" />
+            <img src="uploads/hero-3.jpg" alt="Tree services" class="carousel-image carousel-image-3" style="display: none;" />
+            <img src="uploads/hero-4.jpg" alt="Tree services" class="carousel-image carousel-image-4" style="display: none;" />
+        </div>
+
+        <!-- Dark Green Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-logo-small">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="#f6e9cf" stroke-width="2"/>
+                    <path d="M50 20 L65 50 L50 65 L35 50 Z" fill="#f6e9cf"/>
+                    <circle cx="50" cy="50" r="5" fill="#f6e9cf"/>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+        </nav>
+
+        <!-- Central Logo -->
+        <div class="hero-logo">
+            <svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main tree icon -->
+                <g>
+                    <circle cx="40" cy="40" r="25" fill="none" stroke="#f6e9cf" stroke-width="1.5" opacity="0.8"/>
+                    <path d="M40 15 L55 40 L40 55 L25 40 Z" fill="#f6e9cf" opacity="0.9"/>
+                    <circle cx="40" cy="40" r="3" fill="#f6e9cf"/>
+                    <line x1="40" y1="55" x2="40" y2="75" stroke="#f6e9cf" stroke-width="2"/>
+                    <line x1="30" y1="70" x2="50" y2="70" stroke="#f6e9cf" stroke-width="1.5"/>
+                </g>
+
+                <!-- Text -->
+                <text x="100" y="45" font-family="DM Sans, sans-serif" font-size="24" font-weight="bold" fill="#f6e9cf">
+                    CABOT'S
+                </text>
+                <text x="100" y="70" font-family="DM Sans, sans-serif" font-size="24" font-weight="bold" fill="#f6e9cf">
+                    TREES
+                </text>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2>Professional Tree Services in Surrey</h2>
+            <div class="about-content">
+                <p>
+                    Cabot's Trees & Hedges are based in Woking, set up by Alastair Cabot. Ali has many years of experience as an Arborist, cutting trees since he left school, quickly moving up the ranks to manage a team of people on site. He is a fully qualified expert tree surgeon with qualifications in tree maintenance, health and safety, and a felling license from the Arboricultural Association.
+                </p>
+
+                <p>
+                    Cabot's Trees operate throughout Surrey, Berkshire, and Hampshire, offering a full range of tree services for commercial and residential sectors. Professional expertise combined with a high level of politeness make up our highly skilled team.
+                </p>
+
+                <p>
+                    With a local presence serving Woking, Walton, and Weybridge, we have built a reputation for reliable, friendly, fast, and affordable services. We ensure that all works are done to professional and safe standards while meeting our clients' specific needs. You can rest assured that every job will be completed to your complete satisfaction by our team of experts.
+                </p>
+
+                <p>
+                    We take great pride in our work and pay close attention to our clients' specific requests. Our growth has been organic, built on recommendations from existing customers. Our promise to you is to provide a professional, clean, and efficient service. <a href="#testimonials">Visit our testimonial page</a> to read our reviews.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Auto-play Script -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            if (n >= totalSlides) currentSlide = 0;
+            if (n < 0) currentSlide = totalSlides - 1;
+            slides[currentSlide].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        // Auto-change every 8 seconds
+        setInterval(nextSlide, 8000);
+
+        // Initialize
+        showSlide(currentSlide);
+    </script>
+
+    <!-- Netlify Identity -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
 </html>
