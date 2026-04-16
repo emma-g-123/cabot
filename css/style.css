@@ -125,7 +125,7 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 4rem 2rem;
+    padding: 0 2rem;
     background-color: var(--cream);
     border-top: 1px solid #f0f0f0;
 }
@@ -133,13 +133,14 @@ body {
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 3rem 0;
 }
 
 .about-section h2 {
     font-size: 2rem;
     font-weight: 500;
     color: var(--primary-green);
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
     text-align: left;
 }
 
