@@ -137,13 +137,12 @@ body {
     padding: 0;
 }
 
-.about-section h2 {
+.about-text h1 {
     font-size: 2rem;
     font-weight: 500;
     color: var(--primary-green);
-    margin: 0;
+    margin: 0 0 1.5rem 0;
     text-align: left;
-    padding: 3rem 2rem 0 2rem;
 }
 
 .about-content {
@@ -156,7 +155,7 @@ body {
 .about-text {
     display: grid;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 .about-content p {
