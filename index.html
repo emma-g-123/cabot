@@ -21,16 +21,21 @@
 
         <div class="hero-overlay"></div>
 
-        <nav class="navbar">
-            <div class="nav-logo-small">
+        <nav class="navbar hero-navbar">
+            <a href="index.html" class="nav-logo-small">
                 <img src="uploads/logo.png" alt="Cabot's Trees" />
+            </a>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="#news">News</a></li>
             </ul>
         </nav>
@@ -47,7 +52,7 @@
                     <h1>Professional Tree Services in Surrey</h1>
                     <p>Cabot's Trees & Hedges are based in Woking, set up by Alastair Cabot. Ali has many years of experience as an Arborist, cutting trees since he left school, quickly moving up the ranks to manage a team of people on site. He is a fully qualified expert tree surgeon with qualifications in tree maintenance, health and safety, and a felling license from the Arboricultural Association.</p>
                     <p>Cabot's Trees operate throughout Surrey, Berkshire, and Hampshire, offering a full range of tree services for commercial and residential sectors. Professional expertise combined with a high level of politeness make up our highly skilled team.</p>
-                    <a href="tel:07896740346" class="book-quote-btn">☎ Book a Quote</a>
+                    <a href="tel:07428461278" class="book-quote-btn">☎ Book a Quote</a>
                 </div>
                 <div class="about-image">
                     <img src="uploads/alastair.jpg" alt="Alastair Cabot" />
@@ -57,6 +62,37 @@
     </section>
 
     <script>
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (burgerMenu) {
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    burgerMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // Hero navbar background on scroll
+        const heroNav = document.querySelector('.navbar.hero-navbar');
+        if (heroNav) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    heroNav.style.backgroundColor = 'var(--primary-green)';
+                } else {
+                    heroNav.style.backgroundColor = 'transparent';
+                }
+            });
+        }
+
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-image');
         const totalSlides = slides.length;
@@ -72,17 +108,29 @@
         }
         setInterval(nextSlide, 8000);
         showSlide(currentSlide);
+
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
     </script>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="uploads/logo.png" alt="Cabot's Trees" />
+                <a href="index.html">
+                    <img src="uploads/logo.png" alt="Cabot's Trees" />
+                </a>
             </div>
             <div class="footer-contact">
-                <p><a href="tel:07896740346">07896 740346</a></p>
-                <p><a href="mailto:cabotstrees@gmail.com">cabotstrees@gmail.com</a></p>
+                <p><a href="tel:07428461278">07428 461278</a></p>
+                <p><a href="mailto:info@cabotstrees.com">info@cabotstrees.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">

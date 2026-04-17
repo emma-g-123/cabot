@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Cabot's Trees & Hedges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light">
+        <a href="index.html" class="nav-logo-small">
+            <img src="uploads/logo.png" alt="Cabot's Trees" />
+        </a>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#news">News</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <h1>Services We Offer</h1>
+            
+            <div class="services-intro">
+                <p>There are many aspects to tree surgery, and we understand that to some clients, this can be slightly bewildering when it comes to your own personal requirements.</p>
+                <p>This is where we come in…</p>
+                <p>We offer free no obligation quotations. We can advise you on what type of Tree works will achieve the best results for you.</p>
+                <p>We will also explain the different options you may have, costs for these and the likelihood of any future repeat costs if applicable.</p>
+                <p>Following a visit from us, you will receive a detailed estimate usually immediately via email. You will be able to make an informed decision with any options clearly laid out.</p>
+                <p>We can also liaise with local council authorities on your behalf regarding tree preservation orders and conservation area restrictions.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h2><a href="service-crown-reduction.html">Crown Reduction and Shaping</a></h2>
+                    <p>When a tree has grown too large for its space.</p>
+                    <a href="service-crown-reduction.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-crown-thinning.html">Crown Thinning</a></h2>
+                    <p>Reduction of stems and branches to increase light penetration and air movement.</p>
+                    <a href="service-crown-thinning.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-crown-lifting.html">Crown Lifting</a></h2>
+                    <p>Removing branches and limbs from the lower part of the tree, lifting the crown's overall height.</p>
+                    <a href="service-crown-lifting.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-tree-pruning.html">Pruning</a></h2>
+                    <p>For safety health, aesthetics and to stimulate fruit and flower growth.</p>
+                    <a href="service-tree-pruning.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-tree-felling.html">Felling and Removal</a></h2>
+                    <p>For conservation, safety, planning applications and construction projects.</p>
+                    <a href="service-tree-felling.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-stump-removal.html">Stump Removal and Grinding</a></h2>
+                    <p>A straightforward stump and root removal service for when a tree has been felled to ground level.</p>
+                    <a href="service-stump-removal.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-deadwooding.html">Deadwooding</a></h2>
+                    <p>It is advisable to have your tree regularly inspected and cleared of any dead wood.</p>
+                    <a href="service-deadwooding.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-pollarding.html">Pollarding</a></h2>
+                    <p>Pollarding maintains trees at a specific height.</p>
+                    <a href="service-pollarding.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-hedge-trimming.html">Hedge Trimming</a></h2>
+                    <p>Reduction of height, tidying and shaping.</p>
+                    <a href="service-hedge-trimming.html" class="more-link">More…</a>
+                </div>
+
+                <div class="service-card">
+                    <h2><a href="service-emergency-work.html">Emergency Work</a></h2>
+                    <p>Do you have a problem tree and are not sure how to deal with it?</p>
+                    <a href="service-emergency-work.html" class="more-link">More…</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="uploads/logo.png" alt="Cabot's Trees" />
+                </a>
+            </div>
+            <div class="footer-contact">
+                <p><a href="tel:07428461278">07428 461278</a></p>
+                <p><a href="mailto:info@cabotstrees.com">info@cabosstrees.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cabot's Trees & Hedges. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (burgerMenu) {
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    burgerMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

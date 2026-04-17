@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Cabot's Trees & Hedges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light">
+        <a href="index.html" class="nav-logo-small">
+            <img src="uploads/logo.png" alt="Cabot's Trees" />
+        </a>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#news">News</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Contact</h1>
+            
+            <div class="contact-intro">
+                <p>Whether you need expert advice on tree technicalities, or a quick trim for your garden hedges, we're here to help. We think the best way to give you an accurate price is to come and see the tree in person. We offer free, no obligation quotes for all our services. One of our specialists will visit your property, assess your trees or hedges, and provide a fair estimate tailored to your needs.</p>
+            </div>
+
+            <div class="contact-get-in-touch">
+                <h2>Get in Touch</h2>
+                <p>Ready to get started? Reach out to our team today:</p>
+                
+                <ul class="contact-methods">
+                    <li><a href="tel:07428461278">Call Us: 07428 461278</a></li>
+                    <li><a href="mailto:info@cabotstrees.com">Email Us: info@cabotstrees.com</a></li>
+                    <li>Online Form: Fill out the details below, and we'll get back to you shortly.</li>
+                </ul>
+            </div>
+
+            <div class="contact-form-section">
+                <h2>Contact Form</h2>
+                <form name="contact" method="POST" netlify>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address / Property Location *</label>
+                        <input type="text" id="address" name="address" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select a service --</option>
+                            <option value="tree-felling">Tree Felling</option>
+                            <option value="tree-pruning">Tree Pruning</option>
+                            <option value="hedge-trimming">Hedge Trimming</option>
+                            <option value="stump-removal">Stump Removal</option>
+                            <option value="tree-health">Tree Health Advice</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your trees or hedges..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Message</button>
+                </form>
+
+                <div class="thank-you-message">
+                    <p>Thank you, someone from Cabot's trees will be in touch shortly. For urgent enquiries please call <a href="tel:07428461278">07428 461278</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="uploads/logo.png" alt="Cabot's Trees" />
+                </a>
+            </div>
+            <div class="footer-contact">
+                <p><a href="tel:07428461278">07428 461278</a></p>
+                <p><a href="mailto:info@cabotstrees.com">info@cabotstrees.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cabot's Trees & Hedges. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (burgerMenu) {
+            burgerMenu.addEventListener('click', function() {
+                burgerMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    burgerMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        document.querySelector('form[name="contact"]').addEventListener('submit', function() {
+            setTimeout(function() {
+                document.querySelector('.thank-you-message').style.display = 'block';
+                document.querySelector('form[name="contact"]').style.display = 'none';
+            }, 500);
+        });
+
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
