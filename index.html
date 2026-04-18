@@ -13,10 +13,10 @@
 <body>
     <header class="hero-section">
         <div class="carousel-container">
-            <img src="uploads/hero-1.jpg" alt="Tree services" class="carousel-image carousel-image-1" />
-            <img src="uploads/hero-2.jpg" alt="Tree services" class="carousel-image carousel-image-2" style="display: none;" />
-            <img src="uploads/hero-3.jpg" alt="Tree services" class="carousel-image carousel-image-3" style="display: none;" />
-            <img src="uploads/hero-4.jpg" alt="Tree services" class="carousel-image carousel-image-4" style="display: none;" />
+            <img src="uploads/hero-1.jpg" alt="Tree services" class="carousel-image carousel-image-1" loading="eager" />
+            <img src="uploads/hero-2.jpg" alt="Tree services" class="carousel-image carousel-image-2" style="display: none;" loading="eager" />
+            <img src="uploads/hero-3.jpg" alt="Tree services" class="carousel-image carousel-image-3" style="display: none;" loading="eager" />
+            <img src="uploads/hero-4.jpg" alt="Tree services" class="carousel-image carousel-image-4" style="display: none;" loading="eager" />
         </div>
 
         <div class="hero-overlay"></div>
@@ -49,14 +49,33 @@
         <div class="about-container">
             <div class="about-content">
                 <div class="about-text">
-                    <h1>Professional Tree Services in Surrey</h1>
+                    <h1>Professional Tree Services</h1>
+                    <p class="about-subtitle">Surrey | Berkshire | Hampshire</p>
                     <p>Cabot's Trees & Hedges are based in Woking, set up by Alastair Cabot. Ali has many years of experience as an Arborist, cutting trees since he left school, quickly moving up the ranks to manage a team of people on site. He is a fully qualified expert tree surgeon with qualifications in tree maintenance, health and safety, and a felling license from the Arboricultural Association.</p>
                     <p>Cabot's Trees operate throughout Surrey, Berkshire, and Hampshire, offering a full range of tree services for commercial and residential sectors. Professional expertise combined with a high level of politeness make up our highly skilled team.</p>
                     <a href="tel:07428461278" class="book-quote-btn">☎ Book a Quote</a>
                 </div>
                 <div class="about-image">
-                    <img src="uploads/alastair.jpg" alt="Alastair Cabot" />
+                    <img src="uploads/alastair.jpg" alt="Alastair Cabot" loading="lazy" />
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Block -->
+    <section class="qualifications-section">
+        <div class="qualifications-container">
+            <div class="qualifications-col qualifications-text">
+                <h2>Approved Qualifications</h2>
+                <p>Holding respected qualifications in Arboriculture from both the City & Guilds and the NPTC. Who's qualifications are developed with industry experts and employers to ensure that they support the skills needs of today's industry.</p>
+            </div>
+            <div class="qualifications-col qualifications-logo">
+                <img src="uploads/nptc.png" alt="NPTC" loading="lazy">
+                <p class="qualifications-caption">Industry recognised, practical assessments tailored for land based and environmental sectors.</p>
+            </div>
+            <div class="qualifications-col qualifications-logo">
+                <img src="uploads/city-guilds.png" alt="City & Guilds" loading="lazy">
+                <p class="qualifications-caption">A comprehensive set of qualifications in arboriculture and forestry.</p>
             </div>
         </div>
     </section>
@@ -64,26 +83,27 @@
     <!-- Before/After Slider Section -->
     <section class="before-after-section">
         <div class="before-after-container">
-            <h2>Our Work</h2>
+            <h2>Examples of Our Work</h2>
+            <p class="before-after-subtitle">Use the slider to reveal before and after photos of projects we've undertaken. We pride ourselves on leaving you with healthier trees & hedges and spotless gardens.</p>
             <div class="sliders-grid">
                 <!-- Slider 1 -->
                 <div class="comparison-slider-container">
                     <div class="comparison-image-container">
-                        <img
+                        <img loading="lazy"
                             class="comparison-image-after"
                             src="uploads/after_a.jpg"
                             alt="After"
                         />
-                        <div class="comparison-image-before-wrapper" style="--clip-position: 50%;">
-                            <img
+                        <div class="comparison-image-before-wrapper">
+                            <img loading="lazy"
                                 class="comparison-image-before"
                                 src="uploads/before_a.jpg"
                                 alt="Before"
                             />
                         </div>
                         <div class="comparison-labels">
-                            <div class="comparison-label before-label" style="--position: 50%;">Before</div>
-                            <div class="comparison-label after-label" style="--position: 50%;">After</div>
+                            <div class="comparison-label before-label">Before</div>
+                            <div class="comparison-label after-label">After</div>
                         </div>
                     </div>
                     <input
@@ -93,8 +113,8 @@
                         value="50"
                         class="comparison-slider"
                     />
-                    <div class="comparison-slider-line" style="--clip-position: 50%;"></div>
-                    <div class="comparison-slider-arrow" style="--clip-position: 50%;">
+                    <div class="comparison-slider-line"></div>
+                    <div class="comparison-slider-arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
@@ -106,21 +126,21 @@
                 <!-- Slider 2 -->
                 <div class="comparison-slider-container">
                     <div class="comparison-image-container">
-                        <img
+                        <img loading="lazy"
                             class="comparison-image-after"
                             src="uploads/after_b.jpg"
                             alt="After"
                         />
-                        <div class="comparison-image-before-wrapper" style="--clip-position: 50%;">
-                            <img
+                        <div class="comparison-image-before-wrapper">
+                            <img loading="lazy"
                                 class="comparison-image-before"
                                 src="uploads/before_b.jpg"
                                 alt="Before"
                             />
                         </div>
                         <div class="comparison-labels">
-                            <div class="comparison-label before-label" style="--position: 50%;">Before</div>
-                            <div class="comparison-label after-label" style="--position: 50%;">After</div>
+                            <div class="comparison-label before-label">Before</div>
+                            <div class="comparison-label after-label">After</div>
                         </div>
                     </div>
                     <input
@@ -130,8 +150,8 @@
                         value="50"
                         class="comparison-slider"
                     />
-                    <div class="comparison-slider-line" style="--clip-position: 50%;"></div>
-                    <div class="comparison-slider-arrow" style="--clip-position: 50%;">
+                    <div class="comparison-slider-line"></div>
+                    <div class="comparison-slider-arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
@@ -146,6 +166,7 @@
 
     <script>
         // Before/After Slider
+        // Initialize sliders on page load
         document.querySelectorAll('.comparison-slider').forEach(slider => {
             const container = slider.closest('.comparison-slider-container');
             const beforeWrapper = container.querySelector('.comparison-image-before-wrapper');
@@ -154,13 +175,31 @@
             const afterLabel = container.querySelector('.after-label');
             const line = container.querySelector('.comparison-slider-line');
 
+            // Set initial values
+            let initialValue = parseInt(slider.value);
+            initialValue = Math.max(0, Math.min(100, initialValue));
+            const initialPercent = `${initialValue}%`;
+            beforeWrapper.style.setProperty('--clip-position', initialPercent);
+            arrow.style.setProperty('--clip-position', initialPercent);
+            line.style.setProperty('--clip-position', initialPercent);
+            beforeLabel.style.setProperty('--position', initialPercent);
+            afterLabel.style.setProperty('--position', initialPercent);
+            
+            // Position arrow to image center height
+            const imageHeight = beforeWrapper.parentElement.offsetHeight;
+            arrow.style.top = `${imageHeight * 0.5}px`;
+
             slider.addEventListener('input', (e) => {
-                const value = e.target.value;
+                let value = Math.max(0, Math.min(100, parseInt(e.target.value)));
                 const valuePercent = `${value}%`;
                 
                 beforeWrapper.style.setProperty('--clip-position', valuePercent);
                 arrow.style.setProperty('--clip-position', valuePercent);
                 line.style.setProperty('--clip-position', valuePercent);
+                
+                // Position arrow to match line by calculating from image top
+                const imageHeight = beforeWrapper.parentElement.offsetHeight;
+                arrow.style.top = `${imageHeight * 0.5}px`;
                 
                 // Fade before label when scrolling left (value < 50)
                 const beforeOpacity = Math.max(0, (value - 0) / 50);
@@ -249,17 +288,5 @@
             <p>&copy; 2026 Cabot's Trees & Hedges. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 </html>
