@@ -6,7 +6,7 @@
     <title>Cabot's Trees & Hedges | Professional Tree Surgery in Surrey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Exa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -33,7 +33,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="locations.html">Locations</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="#news">News</a></li>
@@ -61,7 +61,119 @@
         </div>
     </section>
 
+    <!-- Before/After Slider Section -->
+    <section class="before-after-section">
+        <div class="before-after-container">
+            <h2>Our Work</h2>
+            <div class="sliders-grid">
+                <!-- Slider 1 -->
+                <div class="comparison-slider-container">
+                    <div class="comparison-image-container">
+                        <img
+                            class="comparison-image-after"
+                            src="uploads/after_a.jpg"
+                            alt="After"
+                        />
+                        <div class="comparison-image-before-wrapper" style="--clip-position: 50%;">
+                            <img
+                                class="comparison-image-before"
+                                src="uploads/before_a.jpg"
+                                alt="Before"
+                            />
+                        </div>
+                        <div class="comparison-labels">
+                            <div class="comparison-label before-label" style="--position: 50%;">Before</div>
+                            <div class="comparison-label after-label" style="--position: 50%;">After</div>
+                        </div>
+                    </div>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        class="comparison-slider"
+                    />
+                    <div class="comparison-slider-line" style="--clip-position: 50%;"></div>
+                    <div class="comparison-slider-arrow" style="--clip-position: 50%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Slider 2 -->
+                <div class="comparison-slider-container">
+                    <div class="comparison-image-container">
+                        <img
+                            class="comparison-image-after"
+                            src="uploads/after_b.jpg"
+                            alt="After"
+                        />
+                        <div class="comparison-image-before-wrapper" style="--clip-position: 50%;">
+                            <img
+                                class="comparison-image-before"
+                                src="uploads/before_b.jpg"
+                                alt="Before"
+                            />
+                        </div>
+                        <div class="comparison-labels">
+                            <div class="comparison-label before-label" style="--position: 50%;">Before</div>
+                            <div class="comparison-label after-label" style="--position: 50%;">After</div>
+                        </div>
+                    </div>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        class="comparison-slider"
+                    />
+                    <div class="comparison-slider-line" style="--clip-position: 50%;"></div>
+                    <div class="comparison-slider-arrow" style="--clip-position: 50%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
+        // Before/After Slider
+        document.querySelectorAll('.comparison-slider').forEach(slider => {
+            const container = slider.closest('.comparison-slider-container');
+            const beforeWrapper = container.querySelector('.comparison-image-before-wrapper');
+            const arrow = container.querySelector('.comparison-slider-arrow');
+            const beforeLabel = container.querySelector('.before-label');
+            const afterLabel = container.querySelector('.after-label');
+            const line = container.querySelector('.comparison-slider-line');
+
+            slider.addEventListener('input', (e) => {
+                const value = e.target.value;
+                const valuePercent = `${value}%`;
+                
+                beforeWrapper.style.setProperty('--clip-position', valuePercent);
+                arrow.style.setProperty('--clip-position', valuePercent);
+                line.style.setProperty('--clip-position', valuePercent);
+                
+                // Fade before label when scrolling left (value < 50)
+                const beforeOpacity = Math.max(0, (value - 0) / 50);
+                beforeLabel.style.setProperty('--position', valuePercent);
+                beforeLabel.style.opacity = beforeOpacity;
+                
+                // Fade after label when scrolling right (value > 50)
+                const afterOpacity = Math.max(0, (100 - value) / 50);
+                afterLabel.style.setProperty('--position', valuePercent);
+                afterLabel.style.opacity = afterOpacity;
+            });
+        });
+
         // Burger menu toggle
         const burgerMenu = document.querySelector('.burger-menu');
         const navLinks = document.querySelector('.nav-links');

@@ -6,7 +6,7 @@
     <title>Services | Cabot's Trees & Hedges</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Exa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -24,25 +24,27 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#news">News</a></li>
         </ul>
     </nav>
 
+    <!-- Services Header with Background Image -->
+    <section class="page-header" style="background-image: url('uploads/services-banner.jpg');">
+        <div class="page-header-content">
+            <h1>Our Services</h1>
+            <p class="page-header-subtitle">We're specialists in all kinds of Arboriculture, from pruning to felling we want to keep trees healthy for years.</p>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services-section">
         <div class="services-container">
-            <h1>Services We Offer</h1>
             
             <div class="services-intro">
-                <p>There are many aspects to tree surgery, and we understand that to some clients, this can be slightly bewildering when it comes to your own personal requirements.</p>
-                <p>This is where we come in…</p>
-                <p>We offer free no obligation quotations. We can advise you on what type of Tree works will achieve the best results for you.</p>
-                <p>We will also explain the different options you may have, costs for these and the likelihood of any future repeat costs if applicable.</p>
-                <p>Following a visit from us, you will receive a detailed estimate usually immediately via email. You will be able to make an informed decision with any options clearly laid out.</p>
-                <p>We can also liaise with local council authorities on your behalf regarding tree preservation orders and conservation area restrictions.</p>
+                <p>There are many aspects to tree surgery, and we understand that to some clients, this can be slightly bewildering when it comes to your own personal requirements. This is where we come in… We offer free no obligation quotations. We can advise you on what type of Tree works will achieve the best results for you. We will also explain the different options you may have, costs for these and the likelihood of any future repeat costs if applicable. Following a visit from us, you will receive a detailed estimate usually immediately via email. You will be able to make an informed decision with any options clearly laid out. We can also liaise with local council authorities on your behalf regarding tree preservation orders and conservation area restrictions.</p>
             </div>
 
             <div class="services-grid">
@@ -138,7 +140,6 @@
                 navLinks.classList.toggle('active');
             });
 
-            // Close menu when a link is clicked
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', function() {
                     burgerMenu.classList.remove('active');

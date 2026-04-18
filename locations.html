@@ -6,7 +6,7 @@
     <title>Locations | Cabot's Trees & Hedges</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Exa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -24,17 +24,24 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#news">News</a></li>
         </ul>
     </nav>
 
+    <!-- Locations Header with Image and H1 -->
+    <section class="page-header" style="background-image: url('uploads/locations-banner.jpg');">
+        <div class="page-header-content">
+            <h1>Locations</h1>
+            <p class="page-header-subtitle">We proudly serve Surrey, Berkshire, and Hampshire with expert tree care.</p>
+        </div>
+    </section>
+
     <!-- Locations Section -->
     <section class="locations-section">
         <div class="locations-container">
-            <h1>Locations</h1>
             
             <div class="locations-intro">
                 <p>Whether you're looking to reclaim your view or keep your garden hedges looking neat, we're here to help.</p>
@@ -141,7 +148,6 @@
                 navLinks.classList.toggle('active');
             });
 
-            // Close menu when a link is clicked
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', function() {
                     burgerMenu.classList.remove('active');

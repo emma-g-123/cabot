@@ -6,7 +6,7 @@
     <title>Contact | Cabot's Trees & Hedges</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend+Exa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -24,17 +24,24 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#news">News</a></li>
         </ul>
     </nav>
 
+    <!-- Contact Header with Background Image -->
+    <section class="page-header" style="background-image: url('uploads/contact-banner.jpg');">
+        <div class="page-header-content">
+            <h1>Contact</h1>
+            <p class="page-header-subtitle">Ready to get started? Let's talk about your tree care needs.</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="contact-container">
-            <h1>Contact</h1>
             
             <div class="contact-intro">
                 <p>Whether you need expert advice on tree technicalities, or a quick trim for your garden hedges, we're here to help. We think the best way to give you an accurate price is to come and see the tree in person. We offer free, no obligation quotes for all our services. One of our specialists will visit your property, assess your trees or hedges, and provide a fair estimate tailored to your needs.</p>
@@ -131,7 +138,6 @@
                 navLinks.classList.toggle('active');
             });
 
-            // Close menu when a link is clicked
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', function() {
                     burgerMenu.classList.remove('active');
